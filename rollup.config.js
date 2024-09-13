@@ -6,7 +6,8 @@ module.exports = {
   input: './main.js',
   output: {
     file: 'dist/lib/index.js',
-    format: 'cjs'
+      format: 'cjs'
+    
   },
   plugins: [
     nodeResolve(),
