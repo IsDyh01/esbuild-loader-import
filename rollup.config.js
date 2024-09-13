@@ -9,7 +9,7 @@ module.exports = {
     output: [
         {
     file: 'dist/lib/index.js',
-      format: 'esm' // 有cjs 和 esm两种模式
+      format: 'cjs' // 有cjs 和 esm两种模式
         },
         {
             file: 'dist/es/index.js',
