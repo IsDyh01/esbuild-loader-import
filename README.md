@@ -3,12 +3,15 @@
 只能在global.less中全量导入less文件。因此esbuild-loader-import就可以应对这种情况。
 # 如何使用
 ## 1.安装
-<div>npm i esbuild-loader-import</div>
-<div>yarn add esbuild-loader-import</div>
-<div>pnpm i esbuild-loader-import</div>
+```
+npm i esbuild-loader-import
+yarn add esbuild-loader-import
+pnpm i esbuild-loader-import
+```
 
 ## 2.使用
-<div>webpack.config.js</div>
+```
+webpack.config.js
 module: {
     rules: [
         {
@@ -33,18 +36,18 @@ module: {
         }
     ]
 }
-
-<div>
-  <div>libraryName: 需要按需导入的库的名称</div>
-  <div>libraryDirectory: 需要从库中的哪个文件夹进行导入</div>
-  <div>styles: 是否需要将css也按需导入</div>
-</div>
-
+```
+- `libraryName`: 需要按需导入的库的名称
+- `libraryDirectory`: 需要从库中的哪个文件夹进行导入
+- `styles`: 是否需要将css也按需导入
 ## 效果
-<div>原始文件中: import { Button } from 'antd';</div>
-<div>转化为：</div>
-<div>import Button from 'antd/es/button'</div>
-<div>import 'antd/es/button/style'</div>
+```
+// 原始文件:
+import { Button } from 'antd';
+// 转化为：
+import Button from 'antd/es/button'
+import 'antd/es/button/style'
+```
 
 
 
