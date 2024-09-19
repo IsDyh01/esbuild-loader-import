@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = [
   {
         // CommonJS
-        entry: './main.js',
-      mode: 'development',
+    entry: './main.js',
+    mode: 'development',
     output: {
       filename: 'index.js',
         path: path.resolve(__dirname, 'dist/lib'),
@@ -29,8 +29,8 @@ module.exports = [
   },
   {
     // ES Module
-      entry: './main.mjs',
-      mode: 'development',
+    entry: './main.mjs',
+    mode: 'development',
     output: {
       filename: 'index.js',
       path: path.resolve(__dirname, 'dist/es'),
@@ -46,7 +46,7 @@ module.exports = [
 
       rules: [
         {
-          test: /\.js$/,
+          test: /\.js|mjs$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
